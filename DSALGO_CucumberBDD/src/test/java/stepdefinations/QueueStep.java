@@ -10,7 +10,7 @@ import org.openqa.selenium.WebDriver;
 import pageObjects.QueuePage;
 import utilities.Helper;
 
-public class QueueStep {
+public class QueueStep extends BaseClass {
     QueuePage queuePage;
 
     @Given("user open the application")

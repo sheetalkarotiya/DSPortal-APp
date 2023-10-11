@@ -6,7 +6,7 @@ import io.cucumber.java.en.When;
 import pageObjects.StackPage;
 import utilities.Helper;
 
-public class StackSteps {
+public class StackSteps extends BaseClass {
     StackPage stackPage;
 
     @Given("user open the DSApp")

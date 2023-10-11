@@ -1,20 +1,23 @@
 package stepdefinations;
 
-import pageObjects.DataStructurePage;
-import pageObjects.HomePage;
-import pageObjects.LoginPage;
-import pageObjects.RegisterPage;
+import pageObjects.*;
 
 public class BaseClass {
 
-	
-	public HomePage Homepage;
+
+    public HomePage Homepage;
 	
    public RegisterPage RegisterPage;
    
    public LoginPage LoginPage;
    
    public DataStructurePage DataStructure;
+
+   public QueuePage QueuePage;
+
+   public StackPage stackPage;
+
+
    
    
 }
