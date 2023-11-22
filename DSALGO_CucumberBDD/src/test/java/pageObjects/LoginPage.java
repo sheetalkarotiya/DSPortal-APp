@@ -53,14 +53,14 @@ public void loginbutton() {
 
 public void validUsername() {
 	
-	driver.findElement(Username).sendKeys("SheetalKarotiya");
+	driver.findElement(Username).sendKeys("NinjaAlgo");
 	
 	
 }
 
 public void ValidPassword()	{
 	
-	driver.findElement(Password).sendKeys("Gill@1234");
+	driver.findElement(Password).sendKeys("@Algo123");
 	
 }
 

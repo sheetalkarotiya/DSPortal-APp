@@ -1,54 +1,20 @@
 package stepdefinations;
 
-
-import io.cucumber.java.After;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import pageObjects.QueuePage;
 import utilities.Helper;
 
 public class QueueStep extends BaseClass {
-    QueuePage queuePage;
 
-    @Given("user open the application")
-    public void user_open_the_application() {
-
-        queuePage = new QueuePage(Helper.getDriver());
-        Helper.openPage("https://dsportalapp.herokuapp.com/");
+    @Given("user successfully logged into Homepage")
+    public void user_is_on_home_page() {
+        WebDriver driver = Helper.getDriver();
+        driver.get("https://dsportalapp.herokuapp.com/home");
+        queuePage = new QueuePage(driver);
     }
-
-    @When("user click to Get Started button")
-    public void user_click_to_get_started_button() {
-        queuePage.clickGetStarted();
-    }
-
-    @When("user navigate to sign in button")
-    public void user_navigate_to_sign_in_button() {
-
-        queuePage.clickSignInLink();
-    }
-
-    @When("user enters Username")
-    public void user_enters_username() {
-
-        queuePage.setUserName("Candy");
-    }
-
-    @When("user enters Password")
-    public void user_enters_password() {
-
-        queuePage.setPassword("help2010");
-    }
-
-    @Then("user should be logged In into Homepage")
-    public void user_should_be_logged_in_into_homepage() {
-
-        queuePage.clickBtnLogin();
-    }
-
     @When("user navigate to dropdown of data-structures")
     public void user_navigate_to_dropdown_of_data_structures() {
         queuePage.navigateToDropDown();

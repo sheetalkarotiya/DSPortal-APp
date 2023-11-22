@@ -44,14 +44,7 @@ public class Helper {
          Helper = null;
      }
      
-    // public static String GetUserName() {
-    //  return "SheetalKarotiya";
-    // }
-     
-    // public static String GetPassword() {
-    //  return "Gill@1234";
-    // }
-}
+    }
 
 
 

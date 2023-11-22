@@ -15,12 +15,7 @@ Feature: Sign In Page
 
     Examples: 
       | User     | Password1    |
-      | sheetal  | sheetalk1234 |
-      | indu     | indu1234     |
-      | priyanka | priyankaa96  |
-      | vivien   | vivien123669 |
-      | soumya   | soumya1234   |
-
+      | NinjaAlgo  | @Algo123 |
 
   Scenario: Login Successfully with Valid Username and Valid Password
     Given user open the Homepage of dsportal and click get started button

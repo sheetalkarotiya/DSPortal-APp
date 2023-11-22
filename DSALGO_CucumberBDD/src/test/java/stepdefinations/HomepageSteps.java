@@ -16,8 +16,6 @@ public class HomepageSteps extends BaseClass{
 		Homepage = new HomePage (Helper.getDriver());
 		
 	}
-
-	
 @When("user open the Homepage of dsportal and click get started button")
 	public void the_open_the_dsportal_application() {
 	   

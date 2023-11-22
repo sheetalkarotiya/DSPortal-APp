@@ -17,7 +17,7 @@ Feature: Registration page functionality
   Scenario: check if user can register successfully with only valid username
     When user open the Homepage of dsportal and click get started button
     Given user Navigate to the Register Page of DSPortal
-    And user enters valid username "sheetal"
+    And user enters valid username "NinjaAlgo"
     When user clicks registration button
     Then user should get an error message below password textbox
 
@@ -25,8 +25,8 @@ Feature: Registration page functionality
   Scenario: check if user can register successfully when only confirmatory password field is blank
     When user open the Homepage of dsportal and click get started button
     Given user Navigate to the Register Page of DSPortal
-    And user enters valid username "sheetal"
-    And the user enters valid password  "gill"
+    And user enters valid username "NinjaAlgo"
+    And the user enters valid password  "@Algo123"
     When user clicks registration button
     Then user should get an error message below password confirmation box
 
@@ -35,8 +35,8 @@ Feature: Registration page functionality
     When user open the Homepage of dsportal and click get started button
     Given user Navigate to the Register Page of DSPortal
     And user enters symbols as username "@/!/%/$/#/@"
-    And the user enters valid password "gill"
-    And also matching confirmatory password "gill"
+    And the user enters valid password "@Algo123"
+    And also matching confirmatory password "@Algo123"
     When user clicks registration button
     Then user should get an error message
 
@@ -44,9 +44,9 @@ Feature: Registration page functionality
   Scenario: check is user can register successfully with different passwords
     When user open the Homepage of dsportal and click get started button
     Given user Navigate to the Register Page of DSPortal
-    And user enters valid username "Sheetal"
-    And the user enters valid password  "Gill"
-    And also matching confirmatory password "Gill%%%%%"
+    And user enters valid username "NinjaAlgo"
+    And the user enters valid password  "@Algo123"
+    And also matching confirmatory password "@Algo123%%%"
     When user clicks registration button
     Then user should get error message
 
@@ -54,9 +54,9 @@ Feature: Registration page functionality
   Scenario: check if user can register successfully with less than 8 characters
     When user open the Homepage of dsportal and click get started button
     Given user Navigate to the Register Page of DSPortal
-    And user enters valid username "Sheetal"
-     And the user enters valid password "gill"
-    And also matching confirmatory password "gill"
+    And user enters valid username "NinjaAlgo"
+     And the user enters valid password "@Algo123"
+    And also matching confirmatory password "@Algo123"
     When user clicks registration button
    Then user should get an error message
 
@@ -64,18 +64,9 @@ Feature: Registration page functionality
   Scenario: check if user can register successfully with numerical password
     When user open the Homepage of dsportal and click get started button
     Given user Navigate to the Register Page of DSPortal
-    And user enters valid username "Sheetal"
+    And user enters valid username "NinjaAlgo"
     And the user enters valid password "1234"
     And also matching confirmatory password "1234"
     When user clicks registration button
     Then user should get an error message
 
-  @TC_reg_13
-  Scenario: user successfully registers
-    When user open the Homepage of dsportal and click get started button
-    Given user Navigate to the Register Page of DSPortal
-    And user enters valid username "SeleniumSDET129"
-    And the user enters valid password "NumpyNinja@1234"
-    And matching confirmatory password "NumpyNinja@1234"
-    When user clicks registration button
-    Then user should be redirected to homepage

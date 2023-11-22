@@ -19,9 +19,7 @@ import utilities.Helper;
 	    }
 	 
 	 
-	 
-
-	    @After
+	   @After
 	    public static void tearDown(Scenario scenario) {
 	 
 	        if(scenario.isFailed()) {

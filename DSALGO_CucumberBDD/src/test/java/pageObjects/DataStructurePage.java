@@ -1,7 +1,5 @@
 package pageObjects;
 
-
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -16,8 +14,7 @@ public class DataStructurePage  extends BaseClass{
 		this.driver = driver;
 	}
 	
-	
-	 By datastructurebtn = By.xpath("//*[contains(text(),'Data Structures-Introduction')]/../..//a");
+	By datastructurebtn = By.xpath("//*[contains(text(),'Data Structures-Introduction')]/../..//a");
 
 
 	 

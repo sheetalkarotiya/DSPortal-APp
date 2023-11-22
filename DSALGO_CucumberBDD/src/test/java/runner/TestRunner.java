@@ -14,6 +14,7 @@ import io.cucumber.junit.CucumberOptions;
 plugin={"pretty", "html:target/MyReports/report.html",
 		"junit:target/MyReports/report.junit"},
 monochrome=false,		
+
 features= {"src/test/resource/features"},
 glue= "stepdefinations",
 dryRun=false)

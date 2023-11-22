@@ -1,28 +1,21 @@
 Feature: QueuePage
 
   Background: user Registered and logged In into HomePage
-
-    Given user open the application
-
-    When user click to Get Started button
-
-    When user navigate to sign in button
-
-    When user enters Username
-
-    When user enters Password
-
-    Then user should be logged In into Homepage
-
-    When user navigate to dropdown of data-structures
-
-    When user click the queue button
+    Given user Launch the Browser
+    When user open the Homepage of dsportal and click get started button
+    When user Navigate to Sign in button
+    When user enters the Valid Username
+    And enter Valid Password
+    And user click the login button
+    Given user successfully logged into Homepage
 
 
   @queuePage
 
   Scenario: Open the Queue page from the Data-Structures Dropdown
 
+    Given user navigate to dropdown of data-structures
+    When user click the queue button
     Then User should redirected to Queue page
 
 

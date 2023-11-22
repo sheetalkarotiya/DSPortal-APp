@@ -3,46 +3,18 @@ package stepdefinations;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.WebDriver;
+import pageObjects.QueuePage;
 import pageObjects.StackPage;
 import utilities.Helper;
 
-public class StackSteps extends BaseClass {
-    StackPage stackPage;
+public class StackSteps extends BaseClass{
 
-    @Given("user open the DSApp")
-    public void user_open_the_application() {
-
-        stackPage = new StackPage(Helper.getDriver());
-        Helper.openPage("https://dsportalapp.herokuapp.com/");
-    }
-
-    @When("user click to Get Started button on DSPortal Home page")
-    public void user_click_to_get_started_button() {
-        stackPage.clickGetStarted();
-    }
-
-    @When("user navigate to sign in button on DSPortal Home page")
-    public void user_navigate_to_sign_in_button() {
-
-        stackPage.clickSignInLink();
-    }
-
-    @When("user enters valid Username")
-    public void user_enters_username() {
-
-        stackPage.setUserName("Candy");
-    }
-
-    @When("user enters valid Password")
-    public void user_enters_password() {
-
-        stackPage.setPassword("help2010");
-    }
-
-    @Then("user logged In into Homepage")
-    public void user_should_be_logged_in_into_homepage() {
-
-        stackPage.clickBtnLogin();
+    @Given("user is on Homepage")
+    public void user_is_on_home_page() {
+        WebDriver driver = Helper.getDriver();
+        driver.get("https://dsportalapp.herokuapp.com/home");
+        stackPage = new StackPage(driver);
     }
 
     @When("user click on dropdown on get started page")

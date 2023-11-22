@@ -13,7 +13,7 @@ public class BaseClass {
    
    public DataStructurePage DataStructure;
 
-   public QueuePage QueuePage;
+   public QueuePage queuePage;
 
    public StackPage stackPage;
 
